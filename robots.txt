@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tolgaoy5-cpu.github.io/lunoviqstudio/sitemap.xml
