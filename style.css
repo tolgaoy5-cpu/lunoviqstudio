@@ -31,3 +31,10 @@ details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:
 .cta{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:26px 0}
 footer{background:var(--navy);color:#cfc7b4;font-size:14px}footer .bar{display:block}footer a{color:#e9e2d0}
 article{max-width:760px}
+
+.calc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0}
+.cin{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.cin label{font-weight:700;color:var(--navy);font-size:15px}.cin small{display:block;font-weight:400;color:var(--muted)}
+.cin input{width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:17px;background:#fff8dc}
+.cout td:not(:first-child),.cout th{text-align:right}.big{font-size:20px;font-weight:700;color:var(--navy)}
+.note{font-size:14px;color:var(--muted)}

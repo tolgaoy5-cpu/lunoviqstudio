@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Landlord tax calculator: how much more from April 2027? | Lunoviq Studio</title><meta name="description" content="Free calculator: see the extra income tax on your rental profit when property rates rise to 24% / 44% / 49% from April 2027, and a rough personal vs limited company comparison."><link rel="canonical" href="https://tolgaoy5-cpu.github.io/lunoviqstudio/tools/landlord-tax-calculator-2027.html">
+<meta property="og:title" content="Landlord tax calculator: how much more from April 2027? | Lunoviq Studio"><meta property="og:description" content="Free calculator: see the extra income tax on your rental profit when property rates rise to 24% / 44% / 49% from April 2027, and a rough personal vs limited company comparison."><meta property="og:url" content="https://tolgaoy5-cpu.github.io/lunoviqstudio/tools/landlord-tax-calculator-2027.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Lunoviq Studio"><meta property="og:image" content="https://tolgaoy5-cpu.github.io/lunoviqstudio/img/og.jpg">
+<link rel="stylesheet" href="../style.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Landlord tax calculator: how much more from April 2027?", "description": "Free calculator: see the extra income tax on your rental profit when property rates rise to 24% / 44% / 49% from April 2027, and a rough personal vs limited company comparison.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "url": "https://tolgaoy5-cpu.github.io/lunoviqstudio/tools/landlord-tax-calculator-2027.html"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What are the property income tax rates from April 2027?", "acceptedAnswer": {"@type": "Answer", "text": "24% basic, 44% higher and 49% additional rate in England, Wales and Northern Ireland, under the Budget of 28 October 2026. They still have to pass in the Finance Bill."}}, {"@type": "Question", "name": "Does mortgage interest relief change?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Section 24 credit for residential mortgage interest rises from 20% to 24% from 2027/28, so it stays at the property basic rate."}}, {"@type": "Question", "name": "Are landlords with a limited company affected?", "acceptedAnswer": {"@type": "Answer", "text": "Not by these rates. A company pays corporation tax on its profit (19% to 25%), and you pay dividend tax on what you take out."}}]}</script></head>
+<body><header><div class="bar"><a class="logo" href="../index.html">LUNOVIQ <span>STUDIO</span></a>
+<nav><a href="../index.html#products">Spreadsheets</a><a href="../tools/landlord-tax-calculator-2027.html">Tax calculator</a><a href="../guides/index.html">Guides</a><a href="../about.html">About</a><a href="https://www.etsy.com/shop/LunoviqStudio">Etsy shop</a></nav></div></header>
+<main><p class="crumb"><a href="../index.html">Home</a> › Tax calculator</p><article style="max-width:900px"><h1>Landlord tax calculator: how much more from April 2027?</h1><p class="lead">Free calculator: see the extra income tax on your rental profit when property rates rise to 24% / 44% / 49% from April 2027, and a rough personal vs limited company comparison.</p>
+<div class="calc">
+<div class="cin">
+<label>Your other income a year <small>(salary, pension, self-employment)</small><input id="o" type="number" min="0" step="100" value="45000"></label>
+<label>Rent received a year <small>(your share)</small><input id="r" type="number" min="0" step="100" value="36000"></label>
+<label>Running costs a year <small>(not mortgage interest)</small><input id="c" type="number" min="0" step="100" value="6000"></label>
+<label>Mortgage interest a year<input id="i" type="number" min="0" step="100" value="14000"></label>
+</div>
+<div class="wrap-table"><table class="cout">
+<tr><th></th><th>2026/27</th><th>2027/28</th></tr>
+<tr><td>Property tax rates</td><td>20% / 40% / 45%</td><td>24% / 44% / 49%</td></tr>
+<tr><td>Extra income tax because of your lets</td><td id="t26"></td><td id="t27"></td></tr>
+<tr><td>Money you keep from the lets</td><td id="k26"></td><td id="k27"></td></tr>
+</table></div>
+<p class="big" id="msg"></p>
+<h3>Rough comparison: the same lets in a limited company (2027/28)</h3>
+<div class="wrap-table"><table class="cout">
+<tr><td>Company profit after £1,500 of company costs</td><td id="cp"></td></tr>
+<tr><td>Corporation tax</td><td id="ct"></td></tr>
+<tr><td>Extra income tax on dividends (all profit paid out)</td><td id="dt"></td></tr>
+<tr><td>Money you keep — company</td><td id="kc"></td></tr>
+<tr><td>Difference against owning personally</td><td id="df"></td></tr>
+</table></div>
+<p class="note">One owner, England / Wales / NI rates, personal allowance £12,570 (tapered above £100,000). Ignores losses carried
+forward and the one-off costs of moving property into a company (Stamp Duty, Capital Gains Tax, refinancing). A planning aid,
+not tax advice.</p>
+</div>
+<script>
+function sl(a,b,r){var t=0,L=[[0,37700,r[0]],[37700,125140,r[1]],[125140,1e18,r[2]]];for(var k=0;k<3;k++){t+=r[k]*Math.max(0,Math.min(b,L[k][1])-Math.max(a,L[k][0]));}return t;}
+function pa(t){return Math.max(0,12570-Math.max(0,(t-100000)/2));}
+function per(O,R,C,I,P3,cr){var P=Math.max(0,R-C),p=pa(O+P),to=Math.max(0,O-p),tp=Math.max(0,P-Math.max(0,p-O));
+ var tax=sl(0,to,[.2,.4,.45])+sl(to,to+tp,P3),cred=Math.min(cr*Math.min(I,P,Math.max(0,O+P-p)),tax);
+ var t0=sl(0,Math.max(0,O-pa(O)),[.2,.4,.45]);return {x:tax-cred-t0,k:R-C-I-(tax-cred-t0),t0:t0};}
+function f(n){return (n<0?"-":"")+"\u00a3"+Math.round(Math.abs(n)).toLocaleString("en-GB");}
+function run(){var O=+o.value||0,R=+r.value||0,C=+c.value||0,I=+i.value||0;
+ var a=per(O,R,C,I,[.2,.4,.45],.2),b=per(O,R,C,I,[.24,.44,.49],.24);
+ t26.textContent=f(a.x);t27.textContent=f(b.x);k26.textContent=f(a.k);k27.textContent=f(b.k);
+ var d=b.x-a.x;msg.textContent=d>0.5?"From April 2027 you would pay about "+f(d)+" more tax a year on the same lets.":"No extra tax from the April 2027 rates on these figures.";
+ var cpv=R-C-I-1500,ctv=cpv<=0?0:cpv<=50000?cpv*.19:cpv>=250000?cpv*.25:cpv*.25-(250000-cpv)*.015,dv=Math.max(0,cpv-ctv);
+ var p2=pa(O+dv),to2=Math.max(0,O-p2),td=Math.max(0,dv-Math.max(0,p2-O)),da=Math.min(500,td);
+ var dt=sl(0,to2,[.2,.4,.45])+sl(to2+da,to2+td,[.1075,.3575,.3935])-b.t0,kc=dv-dt+Math.min(0,cpv-ctv-dv);
+ cp.textContent=f(cpv);ct.textContent=f(ctv);dt_=dt;document.getElementById("dt").textContent=f(dt);kc_=kc;
+ document.getElementById("kc").textContent=f(kc);var df=kc-b.k;
+ document.getElementById("df").textContent=(df>=0?"Company better by ":"Personal better by ")+f(Math.abs(df));}
+var o=document.getElementById("o"),r=document.getElementById("r"),c=document.getElementById("c"),i=document.getElementById("i"),
+ t26=document.getElementById("t26"),t27=document.getElementById("t27"),k26=document.getElementById("k26"),k27=document.getElementById("k27"),
+ msg=document.getElementById("msg"),cp=document.getElementById("cp"),ct=document.getElementById("ct"),dt_,kc_;
+[o,r,c,i].forEach(function(e){e.addEventListener("input",run);});run();
+</script>
+<h2>Questions</h2><details><summary>What are the property income tax rates from April 2027?</summary><p>24% basic, 44% higher and 49% additional rate in England, Wales and Northern Ireland, under the Budget of 28 October 2026. They still have to pass in the Finance Bill.</p></details><details><summary>Does mortgage interest relief change?</summary><p>Yes. The Section 24 credit for residential mortgage interest rises from 20% to 24% from 2027/28, so it stays at the property basic rate.</p></details><details><summary>Are landlords with a limited company affected?</summary><p>Not by these rates. A company pays corporation tax on its profit (19% to 25%), and you pay dividend tax on what you take out.</p></details>
+<div class="cta"><strong>Want the full picture, year by year?</strong> Rent, arrears, compliance, SA105 tax and Making Tax Digital for UK landlords, in one Excel and Google Sheets workbook.<br><a class="btn" href="../products/uk-landlord-spreadsheet.html">See the UK Landlord Spreadsheet 2026/27</a></div></article></main>
+<footer><div class="bar"><p><strong>Lunoviq Studio</strong> makes spreadsheets for UK landlords, letting agents, sole traders and small businesses.
+Every product works in Microsoft Excel and Google Sheets unless stated, and is sold as an instant download on <a href="https://www.etsy.com/shop/LunoviqStudio">Etsy</a>.</p>
+<p>The guides on this site are general information, not tax or legal advice. Last updated 2026-11-06.</p></div></footer>
+</body></html>

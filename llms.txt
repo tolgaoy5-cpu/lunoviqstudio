@@ -12,6 +12,10 @@
 - [UK Sole Trader Spreadsheet 2026/27](https://tolgaoy5-cpu.github.io/lunoviqstudio/products/uk-sole-trader-spreadsheet.html): Invoices, expenses, mileage, income tax, National Insurance, VAT and Making Tax Digital for self-employed people in the UK. Made for: Sole traders and freelancers in the UK who file a Self Assessment return. Buy: https://www.etsy.com/uk/listing/4566703343/uk-sole-trader-bookkeeping-spreadsheet
 - [Cleaning Business Spreadsheet](https://tolgaoy5-cpu.github.io/lunoviqstudio/products/cleaning-business-spreadsheet.html): Leads, clients, jobs, quotes, invoices, payments and real job profit for cleaning businesses, in Excel and Google Sheets. Made for: Self-employed cleaners and small cleaning companies: domestic, commercial, Airbnb turnover and end of tenancy. Buy: https://www.etsy.com/uk/listing/4567277315/cleaning-business-spreadsheet-client-crm
 
+## Free tools
+
+- [Landlord tax calculator: how much more from April 2027?](https://tolgaoy5-cpu.github.io/lunoviqstudio/tools/landlord-tax-calculator-2027.html): Free calculator: see the extra income tax on your rental profit when property rates rise to 24% / 44% / 49% from April 2027, and a rough personal vs limited company comparison.
+
 ## Guides
 
 - [Making Tax Digital for landlords: what changed in April 2026](https://tolgaoy5-cpu.github.io/lunoviqstudio/guides/making-tax-digital-for-landlords-2026.html): Who must use Making Tax Digital for Income Tax, the £50,000, £30,000 and £20,000 thresholds, the quarterly update deadlines and what records to keep.
